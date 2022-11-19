@@ -18,6 +18,26 @@ func TestSum(t *testing.T) {
 
 	})
 
+	t.Run("should multi paramter", func(t *testing.T) {
+		want := 15
+
+		got := sum([]int{1, 2, 3, 4, 5}...)
+
+		if got != want {
+			t.Errorf("Expeted 15 got %v", got)
+		}
+	})
+
+	t.Run("should none multi paramter", func(t *testing.T) {
+		want := 0
+
+		got := sum([]int{}...)
+
+		if got != want {
+			t.Errorf("Expeted 0 got %v", got)
+		}
+	})
+
 	t.Run("should return 1 when input 1 and 0", func(t *testing.T) {
 		want := 1
 
