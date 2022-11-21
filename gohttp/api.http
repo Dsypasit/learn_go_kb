@@ -1,0 +1,12 @@
+GET http://localhost:2565/users
+Content-Type: application/json
+Authorization: Basic dXNlcjpwYXNzd2Q=
+
+GET http://localhost:2565/health
+
+POST http://localhost:2565/users
+
+{
+	"name": "dsy",
+	"age": 30
+}
